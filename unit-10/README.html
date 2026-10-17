@@ -47,13 +47,13 @@
 
 <div class="card">
 <h1 id="unit-10--practical-applications-and-issues-in-dr-implementations">Unit 10: Practical Applications and Issues in DR Implementations</h1>
-<p><strong>Unit topic:</strong> Practical disaster recovery design: the impact of RPO and RTO values on DR solutions, typical system solutions for standby requirements, DRaaS advantages and disadvantages, and the challenges of vendor lock-in, resilience and network security.</p>
+<p><strong>Unit topic:</strong> Practical DR design: RPO/RTO impact on solutions, standby system options, DRaaS trade-offs, vendor lock-in, resilience and network security.</p>
 <h2 id="artefacts">Artefact(s)</h2>
 <ul>
-<li>The DR design that answers this unit's outcomes directly: <a href="../unit-11-individual-project/executive_summary_v2.html">Executive summary §7, Business continuity and disaster recovery</a></li>
+<li>The DR design answering this unit's outcomes: <a href="../unit-11-individual-project/executive_summary_v2.html">Executive summary §7, Business continuity and disaster recovery</a></li>
 </ul>
 <h2 id="link-to-learning-outcomes">Link to learning outcomes</h2>
-<p>Executive summary §7 was written against this unit's outcome set. A sub-minute RTO and RPO, extracted from the client's stated changeover window and data-loss tolerance via a Business Impact Assessment (Wallace and Webber, 2017), ruled out standard backup-and-restore designs; an active-active multi-region architecture with synchronous replication and automated health-check-driven failover was designed to meet them. The unit's critical themes are addressed head-on: DRaaS versus self-managed infrastructure is weighed on capital and operating expenditure against ceded control; vendor lock-in is treated honestly (exit costs rise even under infrastructure-as-code, so a periodic exit test is funded rather than portability assumed, following Opara-Martins, Sahandi and Tian, 2016); and network security is designed in, because replication propagates a compromised state as readily as a healthy one. The paired-region placement constraint closes the loop with the GDPR obligations covered in Units 5-6.</p>
+<p>A sub-minute RTO and RPO, derived via a Business Impact Assessment (Wallace and Webber, 2017), ruled out backup-and-restore; an active-active multi-region design with automated failover meets them. DRaaS is weighed on cost against ceded control; vendor lock-in is handled by funding a periodic exit test (Opara-Martins, Sahandi and Tian, 2016); replication network security is designed in. Paired-region placement closes the GDPR loop from Units 5-6.</p>
 <h2 id="references">References</h2>
 <p>Opara-Martins, J., Sahandi, R. and Tian, F. (2016) 'Critical analysis of vendor lock-in and its impact on cloud computing migration: a business perspective', <em>Journal of Cloud Computing</em>, 5, 4. Available at: <a href="https://doi.org/10.1186/s13677-016-0054-z">https://doi.org/10.1186/s13677-016-0054-z</a> (Accessed: 11 October 2026).</p>
 <p>Wallace, M. and Webber, L. (2017) <em>The Disaster Recovery Handbook</em>. 3rd edn. New York: AMACOM.</p>
