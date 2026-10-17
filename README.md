@@ -8,9 +8,9 @@
 |-----------|--------|-----------------------------------|
 | Application of Knowledge & Understanding | 10% | Artefacts in unit-01 … unit-12 folders, each with an LO-linking description |
 | Collaboration | 5% | Same artefact coverage + discussion-forums/ + team-exercises/ |
-| Application of Knowledge (individual contributions) | 10% | team-exercises/README.md |
-| Collaboration (individual contributions) | 10% | team-exercises/README.md |
-| Collaboration (Unit 11 vs Unit 6 evaluation) | 5% | unit11-vs-unit6-evaluation.md |
+| Application of Knowledge (individual contributions) | 10% | team-exercises/README.html |
+| Collaboration (individual contributions) | 10% | team-exercises/README.html |
+| Collaboration (Unit 11 vs Unit 6 evaluation) | 5% | unit11-vs-unit6-evaluation.html |
 | Criticality | 40% | reflection/reflection.md (≤ 1,000 words — hard cap) |
 | Structure and Presentation | 10% | index.md navigation + per-unit consistency |
 | Academic Integrity | 10% | Cite Them Right Harvard throughout; every claim anchored to a linked artefact |

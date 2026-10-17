@@ -9,7 +9,7 @@ title: Artefact
 
 ## Artefact(s)
 
-- The DR design that answers this unit's outcomes directly: [Executive summary §7, Business continuity and disaster recovery](../unit-11-individual-project/executive_summary_v2.md)
+- The DR design that answers this unit's outcomes directly: [Executive summary §7, Business continuity and disaster recovery](../unit-11-individual-project/executive_summary_v2.html)
 - [CONFIRM: add any Unit 10 seminar/lab DR-design output if one was produced]
 
 ## Link to learning outcomes

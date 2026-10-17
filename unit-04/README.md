@@ -9,7 +9,7 @@ title: Artefact
 
 ## Artefact(s)
 
-- STRIDE threat model and attack trees on the automated warehousing estate — applied again at module scale in the individual project: [Executive summary §2, Risk Identification](../unit-11-individual-project/executive_summary_v2.md)
+- STRIDE threat model and attack trees on the automated warehousing estate — applied again at module scale in the individual project: [Executive summary §2, Risk Identification](../unit-11-individual-project/executive_summary_v2.html)
 - [CONFIRM: add the threat model you produced in the Unit 4 seminar/scenario exercise, or a screenshot of it, if one exists]
 
 ## Link to learning outcomes

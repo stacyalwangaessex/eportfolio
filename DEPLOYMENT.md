@@ -54,4 +54,4 @@ From then on, make no further commits to `submission`. If you fix anything later
 
 - The DOCX artefacts (`executive_summary.docx`, `executive_summary_v2.docx`, `Pampered_Pets_Risk_Identification_Report_2.docx`) and the PDF are uploaded as binary files — GitHub displays them as download links, which is fine for a portfolio.
 - Keep the PDF's original filename (`12701559_-_Executive_Summary.pdf`) — it is the graded artefact and the filename is part of its provenance.
-- Before pushing, fill the two `TODO` placeholders in `team-exercises/README.md` (your individual contribution statement and any supporting evidence).
+- Before pushing, fill the two `TODO` placeholders in `team-exercises/README.html` (your individual contribution statement and any supporting evidence).

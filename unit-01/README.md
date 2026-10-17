@@ -4,7 +4,7 @@
 
 ## Artefact(s)
 
-- [Discussion forum — Initial Post](discussion-post-unit1-initial.md) (peer responses follow in Unit 2; summary post in Unit 3)
+- [Discussion forum — Initial Post](discussion-post-unit1-initial.html) (peer responses follow in Unit 2; summary post in Unit 3)
 
 ## Link to learning outcomes
 

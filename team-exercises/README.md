@@ -7,7 +7,7 @@ title: Artefact
 
 ## Development Team Project — Pampered Pets risk identification report (Group 2)
 
-**Artefact:** [Pampered_Pets_Risk_Identification_Report_2.docx](Pampered_Pets_Risk_Identification_Report_2.docx) (original submission) · [Full text](pampered_pets_risk_identification_report.md)
+**Artefact:** [Pampered_Pets_Risk_Identification_Report_2.docx](Pampered_Pets_Risk_Identification_Report_2.docx) (original submission) · [Full text](pampered_pets_risk_identification_report.html)
 
 **What the task was.** The Development Team Project asked Group 2 to act as a security consultancy responding to the Pampered Pets scenario: a four-person micro-enterprise (four staff, two networked computers, a single shared wireless gateway, ~90% of trade face to face) facing an investor's proposal to digitalise (e-commerce storefront, cloud inventory, email marketing) and to move to international sourcing. The team produced a risk identification report assessing both the status quo and the proposed transformation, and recommending a proportionate course of action.
 

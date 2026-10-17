@@ -9,8 +9,8 @@ title: Artefact
 
 ## Artefact(s)
 
-- Standards selection under real constraints in the Development Team Project: [Pampered Pets risk identification report §2 — ISO/IEC 27005:2022 adopted over NIST SP 800-30 and OCTAVE Allegro, with Cyber Essentials as the proportionate benchmark](../team-exercises/pampered_pets_risk_identification_report.md)
-- Enterprise-scale standards layering in the individual project: [Executive summary §6 — ISO 31000, NIST CSF 2.0, UK/EU GDPR](../unit-11-individual-project/executive_summary_v2.md)
+- Standards selection under real constraints in the Development Team Project: [Pampered Pets risk identification report §2 — ISO/IEC 27005:2022 adopted over NIST SP 800-30 and OCTAVE Allegro, with Cyber Essentials as the proportionate benchmark](../team-exercises/pampered_pets_risk_identification_report.html)
+- Enterprise-scale standards layering in the individual project: [Executive summary §6 — ISO 31000, NIST CSF 2.0, UK/EU GDPR](../unit-11-individual-project/executive_summary_v2.html)
 - [CONFIRM: add any Unit 5 lecturecast notes or seminar output if you kept them]
 
 ## Link to learning outcomes

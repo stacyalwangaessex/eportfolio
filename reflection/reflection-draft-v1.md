@@ -1,6 +1,6 @@
 # Reflective piece — draft v1 (evidence-grounded)
 
-*Grounded in the actual portfolio artefacts: executive_summary_v2.md, tutor-feedback-and-response.md, pampered_pets_risk_identification_report.md. Short [CONFIRM] slots mark the only places needing your genuine experience — answer the numbered questions at the bottom and the slots fill in. Delete the italic note and this line before submission. Body measures 870 words as drafted (verified by count); expect ≈ 930–980 once the six [CONFIRM] slots are filled — still safely under the 1,000 cap.*
+*Grounded in the actual portfolio artefacts: executive_summary_v2.html, tutor-feedback-and-response.html, pampered_pets_risk_identification_report.html. Short [CONFIRM] slots mark the only places needing your genuine experience — answer the numbered questions at the bottom and the slots fill in. Delete the italic note and this line before submission. Body measures 870 words as drafted (verified by count); expect ≈ 930–980 once the six [CONFIRM] slots are filled — still safely under the 1,000 cap.*
 
 ---
 
