@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 10 — Practical Applications and Issues in DR Implementations</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; max-width: 820px; margin: 40px auto; padding: 0 20px; line-height: 1.55; }
+  h1, h2, h3, a { color: #0b5394; }
+  a { text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  hr { border: 0; border-top: 1px solid #0b5394; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th, td { border: 1px solid #0b5394; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #0b5394; color: #fff; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  blockquote { border-left: 3px solid #0b5394; margin-left: 0; padding-left: 14px; color: #444; }
+  code { background: #f4f4f4; padding: 1px 4px; }
+  .backlink { margin-top: 32px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<h1 id="unit-10--practical-applications-and-issues-in-dr-implementations">Unit 10 — Practical Applications and Issues in DR Implementations</h1>
+<p><strong>Unit topic:</strong> Practical disaster recovery design: the impact of RPO and RTO values on DR solutions, typical system solutions for standby requirements, DRaaS advantages and disadvantages, and the challenges of vendor lock-in, resilience and network security.</p>
+<h2 id="artefacts">Artefact(s)</h2>
+<ul>
+<li>The DR design that answers this unit's outcomes directly: <a href="../unit-11-individual-project/executive_summary_v2.html">Executive summary §7, Business continuity and disaster recovery</a></li>
+</ul>
+<h2 id="link-to-learning-outcomes">Link to learning outcomes</h2>
+<p>Executive summary §7 was written against this unit's outcome set. A sub-minute RTO and RPO, extracted from the client's stated changeover window and data-loss tolerance via a Business Impact Assessment (Wallace and Webber, 2017), ruled out standard backup-and-restore designs; an active–active multi-region architecture with synchronous replication and automated health-check-driven failover was designed to meet them. The unit's critical themes are addressed head-on: DRaaS versus self-managed infrastructure is weighed on capital and operating expenditure against ceded control; vendor lock-in is treated honestly (exit costs rise even under infrastructure-as-code, so a periodic exit test is funded rather than portability assumed, following Opara-Martins, Sahandi and Tian, 2016); and network security is designed in, because replication propagates a compromised state as readily as a healthy one. The paired-region placement constraint closes the loop with the GDPR obligations covered in Units 5–6.</p>
+<h2 id="references">References</h2>
+<p>Opara-Martins, J., Sahandi, R. and Tian, F. (2016) 'Critical analysis of vendor lock-in and its impact on cloud computing migration: a business perspective', <em>Journal of Cloud Computing</em>, 5, 4. Available at: <a href="https://doi.org/10.1186/s13677-016-0054-z">https://doi.org/10.1186/s13677-016-0054-z</a> (Accessed: 11 October 2026).</p>
+<p>Wallace, M. and Webber, L. (2017) <em>The Disaster Recovery Handbook</em>. 3rd edn. New York: AMACOM.</p>
+
+<hr>
+<p class="backlink"><a href="../index.html">&larr; Back to portfolio home</a></p>
+</body>
+</html>

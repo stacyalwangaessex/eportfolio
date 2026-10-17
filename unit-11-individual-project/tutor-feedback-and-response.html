@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 11 — tutor feedback and my response</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; max-width: 820px; margin: 40px auto; padding: 0 20px; line-height: 1.55; }
+  h1, h2, h3, a { color: #0b5394; }
+  a { text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  hr { border: 0; border-top: 1px solid #0b5394; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th, td { border: 1px solid #0b5394; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #0b5394; color: #fff; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  blockquote { border-left: 3px solid #0b5394; margin-left: 0; padding-left: 14px; color: #444; }
+  code { background: #f4f4f4; padding: 1px 4px; }
+  .backlink { margin-top: 32px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<h1 id="unit-11--tutor-feedback-and-my-response">Unit 11 — tutor feedback and my response</h1>
+<p><em>Required portfolio element: "Feedback from peers and tutors". The provisional grade for the Unit 11 executive summary was 60% (19/30 knowledge, 17/30 criticality, 13/20 sources, 5/10 structure, 6/10 integrity). The feedback below is summarised from the marker's comments; my response shows how each point was addressed in the revised artefact (<a href="executive_summary_v2.html">executive_summary_v2.html</a>).</em></p>
+<h2 id="what-the-marker-said-and-what-i-did-about-it">What the marker said, and what I did about it</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Feedback point</th>
+<th>My response</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The submission promised minimum, modal and maximum inputs without providing them; calculations were insufficiently explained.</td>
+<td>I added a full input table (annual probabilities, severity medians and dispersions for all six scenarios), explained the Poisson-rate conversion λ = −ln(1 − p), and documented the lognormal severity fitting.</td>
+<td>v2 §4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The recovery proposal needed named services and a definite platform recommendation.</td>
+<td>The revised artefact names a definite platform (Microsoft Azure, paired UK South and UK West regions) and specific services (Azure Front Door, Azure SQL Database Business Critical zone-redundant, auto-failover groups), with the decision rationale.</td>
+<td>v2 §7</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sensitivity contributions and correlation assumptions lacked supporting calculations.</td>
+<td>I now state how variance shares are computed (covariance of each scenario's simulated annual loss with the aggregate, divided by aggregate variance) and report both the target and achieved correlation (ρ = 0.55 latent; Spearman 0.32 realised).</td>
+<td>v2 §4–5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>An aggregate supply-disruption probability was missing.</td>
+<td>Added: 46.7% probability of at least one supply-disruption event per year, alongside the 16.9% quality figure.</td>
+<td>v2 §5</td>
+</tr>
+<tr>
+<td>5</td>
+<td>The conclusion that digitalisation does not inherently threaten quality was not established against the previous operating model.</td>
+<td>I added an explicit comparison with the previous craft-based, single-site model, and qualified the conclusion honestly: the inputs are judgement-based, so the comparison is argued, not measured.</td>
+<td>v2 §5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Recovery claims needed clearer qualification and testing criteria.</td>
+<td>The revised design separates zonal failures (synchronous replication; published RPO 0 / RTO ≤ 60 s) from full regional outages (asynchronous; RPO ≤ 5 min), states the qualification openly, and sets test criteria: quarterly failover drills with measured RTO/RPO, an annual regional game day, and a funded annual exit test.</td>
+<td>v2 §7</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Scaling of survey findings into company-specific probabilities was not demonstrated.</td>
+<td>§4 now states explicitly how sector surveys were used: to sanity-check the plausibility of the assumed frequencies (upper-bound logic, scaled by firm size), not to derive them, and the limitation is restated.</td>
+<td>v2 §4</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Direct technical documentation was needed for replication, regional configuration and failover performance.</td>
+<td>Added Microsoft Learn technical references for zone redundancy, auto-failover groups and their published RTO/RPO figures.</td>
+<td>v2 §7 + references</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Fixed seed mentioned but not supplied, limiting reproducibility.</td>
+<td>The seed value (42, NumPy PCG64) and iteration count (200,000) are now stated in the artefact itself, and the model file is linked so any figure can be regenerated.</td>
+<td>v2 §4</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Author names and citation formatting needed consistent checking.</td>
+<td>A consistency pass was run over all in-text citations against the reference list; every citation maps to exactly one entry and vice versa.</td>
+<td>v2 references</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Misplaced commas, awkward sentences, repetition; a recovery diagram would help.</td>
+<td>The revised artefact was proofread line by line, repetition was cut, and a text-based recovery architecture diagram was added.</td>
+<td>v2 throughout, §7</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-this-feedback-taught-me-reflection-prompts-for-the-1000-word-piece">What this feedback taught me (reflection prompts, for the ≤1,000-word piece)</h2>
+<ul>
+<li><strong>Reproducibility must live in the artefact, not beside it.</strong> I knew the model was seeded and reproducible, but the reader of the document alone could not verify that. "Mentioned but not supplied" is a reproducibility failure. Lesson: evidence belongs where the reader is, not where the work was done.</li>
+<li><strong>A promise in prose is not a deliverable.</strong> Writing "assumed minimum, most-likely and maximum values behind every input" without printing them created the appearance of rigour without its substance — the marker read it exactly right.</li>
+<li><strong>Self-assessment optimism.</strong> I over-estimated this work against the rubric. The gap was concentrated in specific, checkable items (inputs, seed, platform decision, aggregate probability) rather than general quality — which suggests my self-review was checking for the wrong things: fluency instead of verifiability.</li>
+<li><strong>Proofreading is a graded skill, not a courtesy.</strong> The structure band (5/10) shows how much presentation errors cost in a 10% criterion.</li>
+</ul>
+
+<hr>
+<p class="backlink"><a href="../index.html">&larr; Back to portfolio home</a></p>
+</body>
+</html>

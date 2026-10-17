@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 8 discussion forum — Peer Response 2 (to Abinel Madzivire)</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; max-width: 820px; margin: 40px auto; padding: 0 20px; line-height: 1.55; }
+  h1, h2, h3, a { color: #0b5394; }
+  a { text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  hr { border: 0; border-top: 1px solid #0b5394; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th, td { border: 1px solid #0b5394; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #0b5394; color: #fff; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  blockquote { border-left: 3px solid #0b5394; margin-left: 0; padding-left: 14px; color: #444; }
+  code { background: #f4f4f4; padding: 1px 4px; }
+  .backlink { margin-top: 32px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<h1 id="unit-8-discussion-forum--peer-response-2-to-abinel-madzivire">Unit 8 discussion forum — Peer Response 2 (to Abinel Madzivire)</h1>
+<p><strong>Thread:</strong> Critique of CVSS and alternatives (Wunder et al., 2024) — three-week discussion covering Units 7–9 <strong>Label:</strong> Peer Response <strong>Responding to:</strong> Abinel Madzivire, posted Tuesday, 8 September 2026, 7:08 PM <strong>Word count:</strong> 201 body words excluding in-text citations, verified by count (209 including citations; within the 200–300 limit — citations and references excluded from the word count per the activity instructions)</p>
+<hr />
+<p><strong>Peer Response</strong></p>
+<p>Abinel, I agree with your critique, and in particular with your conclusion that CVSS's numerical precision should not be mistaken for objective risk. The evidence you cite supports this strongly: Wunder et al. (2024) found that differences in scoring traced back to characteristics of CVSS itself rather than evaluators' experience, which means the problem will persist no matter how experienced the team.</p>
+<p>Your hybrid proposal — exploitation probability as the primary mechanism with CVSS severity retained as complementary — is a sensible reconciliation, and Jacobs et al. (2021) support the operational value of that ordering. I would build on it in one respect. Any combined system still requires human judgement where likelihood and consequence meet, and the study shows what happens when that judgement is unguided: 85% of participants found CVSS inconsistent yet 80% still used it. For the approach to be defensible, the point where probability and impact are weighed together must be explicit and documented — a defined decision rule rather than an intuitive blend — so the combined output inherits the auditability that EPSS provides for the likelihood half.</p>
+<p>A question back to you: who should own that documented decision rule — the security team, or the asset owners whose risk is being decided?</p>
+<h2 id="references">References</h2>
+<p>Jacobs, J., Romanosky, S., Edwards, B., Adjerid, I. and Roytman, M. (2021) 'Exploit Prediction Scoring System (EPSS)', <em>Digital Threats: Research and Practice</em>, 2(3), pp. 1–17. Available at: <a href="https://doi.org/10.1145/3436242">https://doi.org/10.1145/3436242</a> (Accessed: 17 October 2026).</p>
+<p>Wunder, J., Kurtz, A., Eichenmüller, C., Gassmann, F. and Benenson, Z. (2024) 'Shedding Light on CVSS Scoring Inconsistencies: A User-Centric Study on Evaluating Widespread Security Vulnerabilities', <em>2024 IEEE Symposium on Security and Privacy (SP)</em>, pp. 1102–1121. Available at: <a href="https://doi.org/10.1109/SP54263.2024.00058">https://doi.org/10.1109/SP54263.2024.00058</a> (Accessed: 17 October 2026).</p>
+<hr />
+<p><em>Artefact notes (not part of the post): evidences LO2 and LO3. Response is primarily agreement with extension, per user direction, engaging Abinel's own sources (Jacobs et al. 2021; Wunder et al. 2024). Second of two peer responses for this discussion; Unit 9 summary post follows.</em></p>
+
+<hr>
+<p class="backlink"><a href="../index.html">&larr; Back to portfolio home</a></p>
+</body>
+</html>

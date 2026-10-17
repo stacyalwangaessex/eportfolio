@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive Summary</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; max-width: 820px; margin: 40px auto; padding: 0 20px; line-height: 1.55; }
+  h1, h2, h3, a { color: #0b5394; }
+  a { text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  hr { border: 0; border-top: 1px solid #0b5394; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th, td { border: 1px solid #0b5394; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #0b5394; color: #fff; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  blockquote { border-left: 3px solid #0b5394; margin-left: 0; padding-left: 14px; color: #444; }
+  code { background: #f4f4f4; padding: 1px 4px; }
+  .backlink { margin-top: 32px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<h1 id="executive-summary">Executive Summary</h1>
+<h2 id="1-purpose-and-scope">1. Purpose and scope</h2>
+<p>Cathy has decided to move the business into a fully digital operating model: an international supply chain supported by a worldwide network of automated warehouses. Two prospective clients, HRH the King and Prince Albert II of Monaco, have already signalled their interest, but both have raised the same objection. They want to know whether these changes will put the quality of the product, or the security of supply, at risk. This summary answers that question. It estimates the probability that the changes could damage either quality or availability, then sets out continuity and disaster recovery arrangements that keep the online shop running 24/7/365 with a changeover window, and a data-loss exposure, of under one minute.</p>
+<p>Throughout, risk is treated in the way Aven and Thekdi (2025, chapter 2) define it: the consequences of an activity together with the uncertainty attached to them, written as (C,U), or as (A,C,U) when an initiating event A is identified and C is the outcome given that event. Their descriptive scheme (A',C',Q,K) is also used below, where A' and C' are the events and consequences actually considered, Q expresses the uncertainty about them, and K is the knowledge the judgements rest on (Aven and Thekdi, 2025, chapter 3). Every figure in this document therefore carries a judgement about how much we actually know, which is the discipline the brief asks for.</p>
+<h2 id="2-identifying-the-risks">2. Identifying the risks</h2>
+<p>I identified the risk sources, threats and hazards before attempting any quantification, following the assessment process in the core text (Aven and Thekdi, 2025, chapter 4). Two techniques were used together. A STRIDE-based threat model was applied to the automated warehousing and e-commerce estate, since STRIDE asks how a system might be attacked rather than only how it might fail (OWASP, 2024). Alongside it, attack trees were used to break the most serious threat, disruption of an automated warehouse, down into the pathways that could lead to it.</p>
+<p>That work produced two clusters of risk. The first concerns product quality. Automation removes part of the tacit, human judgement that a luxury producer has historically depended on, and the practical failure modes are sensor drift, calibration error, cold-chain excursion in transit, and a loss of craft oversight once production is spread across several sites. The second concerns supply. Dispersing operations internationally enlarges the attack surface and multiplies single points of failure, so the relevant risks are dependence on a small group of key suppliers, logistics congestion, ransomware against operational technology, and data corruption that spreads between connected systems.</p>
+<p>Both clusters map onto the interests the prospective clients have raised. Quality corresponds to integrity and supply to availability, which is why the analysis tracks those dimensions of the CIA triad rather than confidentiality.</p>
+<h2 id="3-selecting-a-method-and-its-limitations">3. Selecting a method, and its limitations</h2>
+<p>Several quantitative approaches were considered against the decision the business actually faces. Monte Carlo simulation was chosen, structured by the FAIR decomposition of risk into the frequency of loss events and the magnitude of the losses themselves (Hubbard and Seiersen, 2023; Aven and Thekdi, 2025, chapter 5). The method suits this problem for three reasons. It returns probabilities and loss distributions, precisely what the clients have asked to see. It copes with the thin historical record any new operating model produces. And it supports sensitivity analysis, letting management see which variables actually drive the result.</p>
+<p>The choice carries weaknesses worth stating plainly. The technique is only as good as the distributions it is given, so weak elicitation produces results that look precise while being unreliable. It is also more demanding than scoring methods, in computation and in the statistical literacy it assumes of those interpreting the output. Finally, treating variables as independent flatters the model whenever they in fact move together. I have addressed these points by stating the assumed minimum, most-likely and maximum values behind every input, documenting the modelling process and adding an explicit correlation term, though no design removes them completely. The figures below should inform the decision, not make it.</p>
+<p>Two alternatives were rejected. Bayesian methods offer a less transparent route to the threshold-based loss questions posed here, although they would become valuable once real incident data accumulated. Multi-criteria methods such as AHP and TOPSIS, surveyed by Taherdoost and Madanchian (2023), collapse judgements into a single preference score and do not produce the frequency-and-magnitude distributions the brief requires.</p>
+<h2 id="4-assumptions-and-data">4. Assumptions and data</h2>
+<ul>
+<li><strong>Simulation:</strong> 200,000 iterations per scenario, with a fixed seed so that every figure below can be reproduced exactly. Loss-event frequency was modelled as a Poisson process whose rate reproduces the assumed annual probability of at least one event, and the size of each event as a lognormal severity fitted to assumed minimum, most-likely and maximum values — the skewed shape that expert judgement about new risks usually takes.</li>
+<li><strong>Quality risk:</strong> frequency and impact are modelled assumptions reflecting the failure modes identified in Section 2, with magnitude expressed as the share of annual revenue exposed to rework, recall or reputational damage.</li>
+<li><strong>Supply risk:</strong> frequency and impact are modelled assumptions, informed by the incident patterns reported in sector surveys (BCI, 2023; PwC, 2023) and adjusted for the firm's scale, rather than values extracted from those reports.</li>
+<li><strong>Correlation:</strong> cyber-attack frequency and logistics disruption were linked by a Gaussian copula calibrated to a rank correlation of approximately 0.3, reflecting the tendency for the two to coincide during peak trading periods. The copula adds the dependence without disturbing the individual distributions.</li>
+<li><strong>Horizon and currency:</strong> all magnitudes are in EUR over a single year.</li>
+<li><strong>Stated limitation:</strong> where no internal data existed, informed judgement was used rather than measured frequencies. This widens the uncertainty around the results and is acknowledged rather than concealed.</li>
+</ul>
+<h2 id="5-results">5. Results</h2>
+<table>
+<thead>
+<tr>
+<th>Risk scenario</th>
+<th>Annual probability of a loss event</th>
+<th>95th-percentile loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Loss of product quality (cold-chain or sensor failure)</td>
+<td>6.3%</td>
+<td>€0.46m</td>
+</tr>
+<tr>
+<td>Loss of quality through loss of craft oversight</td>
+<td>11.3%</td>
+<td>€0.40m</td>
+</tr>
+<tr>
+<td>Supply chain: cyber-attack or ransomware on automated warehouses</td>
+<td>17.4%</td>
+<td>€2.43m</td>
+</tr>
+<tr>
+<td>Supply chain: key-supplier dependency failure</td>
+<td>21.0%</td>
+<td>€0.84m</td>
+</tr>
+<tr>
+<td>Supply chain: logistics or congestion disruption</td>
+<td>14.8%</td>
+<td>€0.84m</td>
+</tr>
+<tr>
+<td>Supply chain: data-integrity corruption across systems</td>
+<td>9.6%</td>
+<td>€0.40m</td>
+</tr>
+</tbody>
+</table>
+<p>The model puts the probability that <em>any</em> quality-loss event occurs within a year at just under 17%, with a strongly right-skewed tail: although the average annual loss across all scenarios is around €0.8m, the 99th-percentile combined loss reaches €6.4m, driven by a small number of correlated cyber-and-logistics events. Sensitivity analysis pointed to one dominant variable. The frequency of cyber-attacks on warehouse operational technology accounted for roughly three-quarters of the variance in the aggregate loss distribution, with logistics disruption next at about one tenth and supplier concentration around six per cent. Intervention in one place therefore shifts the firm's overall risk profile rather than merely moving it around.</p>
+<p>Where the inputs rest on judgement rather than measurement, the output reflects present belief, and the strength of knowledge behind it is, in Aven and Thekdi's terms, only moderate to strong. The value of the exercise lies less in the exact percentages than in making the uncertainty visible and comparable, so that spending can be justified against a transparent rationale rather than intuition.</p>
+<h2 id="6-recommendations-in-order-of-commercial-priority">6. Recommendations, in order of commercial priority</h2>
+<p>The recommendations are ranked by commercial exposure, starting with the risk most likely to damage the client relationship and revenue.</p>
+<p><strong>Priority 1. Harden the supply chain against cyber-attack (approximately 17.4%).</strong> Warehouse operational technology should be segregated from corporate networks, with segmentation, least privilege and continuous monitoring enforced (NIST, 2024). This targets the largest probability-weighted loss and the concern the clients have voiced.</p>
+<p><strong>Priority 2. Reduce key-supplier dependency (approximately 21%).</strong> Dual-sourcing of critical components addresses the most likely failure mode, yet it is also the control most often deferred on cost grounds (Christopher, 2016). Given how the probabilities fall, deferring it is difficult to defend.</p>
+<p><strong>Priority 3. Protect quality control under automation (approximately 17%, aggregated).</strong> Human quality gates should sit alongside the automated sensing, and the cold chain should be instrumented with tamper-evident logging. This most directly defends the product quality the clients are paying for.</p>
+<p><strong>Priority 4. Data-integrity controls (approximately 9.6%).</strong> Reconciliation and referential-integrity checks across connected systems will stop erroneous data propagating silently between them.</p>
+<p><strong>Priority 5. Standards and GDPR compliance (a critical business requirement).</strong> Digitalisation is a data-protection question as much as an operational one, and standards should shape the risk design rather than follow it. Moving personal data across an international supply chain engages the restrictions on transfers to third countries under the UK and EU GDPR (Regulation (EU) 2016/679, 2016; Data Protection Act 2018). A Data Protection Impact Assessment should therefore be mandatory at each new automated site, with Standard Contractual Clauses or an adequacy decision used for cross-border processing and the wider ISO 31000 and NIST frameworks applied to structure assurance (ISO, 2018; NIST, 2024).</p>
+<p>The programme also raises ethical and professional questions. Concentrating sensitive data across automated warehouses increases the firm's duty of care towards the people whose information it processes at scale, and the reputational cost of a breach must be weighed alongside the financial figure. The practitioner is therefore expected to balance commercial, legal and ethical pressures rather than optimise for any one.</p>
+<h2 id="7-business-continuity-and-disaster-recovery">7. Business continuity and disaster recovery</h2>
+<p>A business continuity plan begins with a business impact assessment, from which the two governing parameters in this case derive (Wallace and Webber, 2017). Ms O'dour's requirements translate directly into a recovery time objective of under one minute, which is the changeover window, and a recovery point objective of under one minute, which is the maximum tolerable data loss. Values this tight sit at the stringent end of the resilience spectrum and rule out ordinary backup-and-restore designs, whose recovery times are measured in hours (Wallace and Webber, 2017).</p>
+<p>To meet them, I recommend an active-active, multi-region deployment with synchronous replication and automated, health-check-driven failover. Global load balancing would direct traffic between regions while database state is kept synchronised, producing a sub-minute RTO and RPO. The plan has to be automated and rehearsed; the core text lists exercises and drills among the instruments of resilience management (Aven and Thekdi, 2025, chapter 8), so failover should be exercised on a regular schedule.</p>
+<p>On hosting, a hyperscale provider offering paired regions within a single jurisdiction is the sensible choice (for example AWS or Microsoft Azure paired UK/EU regions), selected for native synchronous replication and managed failover. It can be run as a self-managed design or, more economically, through Disaster Recovery as a Service, which lowers capital and operational cost at the price of handing some control to the provider. Vendor lock-in deserves a candid answer rather than a reassuring one: proprietary services do raise the cost of exit over time (Opara-Martins, Sahandi and Tian, 2016), an exposure mitigated but not removed by infrastructure-as-code, containerisation and open data formats, so a periodic exit test should be funded rather than the portability claim assumed. Network security must be designed in from the start, since replication can propagate a corrupted state between regions as easily as a healthy one. One tension is worth flagging: regions must be far enough apart to fail independently, yet close enough to satisfy the GDPR constraints above.</p>
+<h2 id="8-conclusion">8. Conclusion</h2>
+<p>The modelling suggests that digitalisation does not inherently threaten product quality, although it does raise the probability of supply-chain disruption, dominated by supplier dependency and cyber-attack. The likelihood of any quality-loss event within a year is around 17%, while the most probable single loss, key-supplier failure, approaches 21%. These figures are commercially significant and support the mitigation sequence set out above. Alongside them, an active-active, synchronously replicated cloud architecture can meet the one-minute RTO and RPO, provided the continuity plan is automated and rehearsed and GDPR-compliant transfer mechanisms are built in from the outset. The recommendations give the firm a basis for the assurance its premium clients are asking for, while keeping the strategy aligned with the emerging risk landscape, in which automation and artificial intelligence continue to reshape both the threats and the defences available (Aven and Thekdi, 2025, chapter 12; Dwivedi <em>et al.</em>, 2021).</p>
+<h2 id="references">References</h2>
+<p>Aven, T. and Thekdi, S. (2025) <em>Risk Science: An Introduction</em>. 2nd edn. Abingdon: Routledge. Available at: <a href="https://doi.org/10.4324/9781003494317">https://doi.org/10.4324/9781003494317</a></p>
+<p>BCI (2023) <em>BCI Supply Chain Resilience Report 2023</em>. Available at: <a href="https://www.thebci.org/static/340ffa9b-03b4-4baf-9add7071cbbea758/BCI-Supply-Chain-Resilience-Report-2023.pdf">https://www.thebci.org/static/340ffa9b-03b4-4baf-9add7071cbbea758/BCI-Supply-Chain-Resilience-Report-2023.pdf</a> (Accessed: 11 October 2026).</p>
+<p>Christopher, M. (2016) <em>Logistics and Supply Chain Management</em>. 5th edn. Harlow: Pearson.</p>
+<p><em>Data Protection Act 2018</em>, c. 12. United Kingdom. Available at: <a href="https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted">https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted</a> (Accessed: 11 October 2026).</p>
+<p>Dwivedi, Y.K. <em>et al.</em> (2021) 'Artificial Intelligence (AI): multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy', <em>International Journal of Information Management</em>, 57, 101994. Available at: <a href="https://doi.org/10.1016/j.ijinfomgt.2019.08.002">https://doi.org/10.1016/j.ijinfomgt.2019.08.002</a></p>
+<p>Hubbard, D.W. and Seiersen, R. (2023) <em>How to Measure Anything in Cybersecurity Risk</em>. 2nd edn. Hoboken, NJ: Wiley.</p>
+<p>ISO (2018) <em>ISO 31000:2018 Risk management — Guidelines</em>. Geneva: International Organization for Standardization. Available at: <a href="https://www.iso.org/standard/65694.html">https://www.iso.org/standard/65694.html</a> (Accessed: 11 October 2026).</p>
+<p>NIST (2024) <em>The NIST Cybersecurity Framework (CSF) 2.0</em>. Gaithersburg, MD: National Institute of Standards and Technology. Available at: <a href="https://doi.org/10.6028/NIST.CSWP.29">https://doi.org/10.6028/NIST.CSWP.29</a></p>
+<p>Opara-Martins, J., Sahandi, R. and Tian, F. (2016) 'Critical analysis of vendor lock-in and its impact on cloud computing migration: a business perspective', <em>Journal of Cloud Computing</em>, 5, 4. Available at: <a href="https://doi.org/10.1186/s13677-016-0054-z">https://doi.org/10.1186/s13677-016-0054-z</a></p>
+<p>OWASP (2024) <em>Threat Modeling Cheat Sheet</em>. Available at: <a href="https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html</a> (Accessed: 11 October 2026).</p>
+<p>PwC (2023) <em>Global Digital Trust Insights 2024</em>. Available at: <a href="https://www.pwc.com/hu/hu/kiadvanyok/assets/pdf/pwc-2024-global-digital-trust-insights.pdf">https://www.pwc.com/hu/hu/kiadvanyok/assets/pdf/pwc-2024-global-digital-trust-insights.pdf</a> (Accessed: 11 October 2026).</p>
+<p><em>Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data (General Data Protection Regulation)</em> (2016) <em>Official Journal</em> L 119, 4 May, pp. 1–88. Available at: <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">https://eur-lex.europa.eu/eli/reg/2016/679/oj</a> (Accessed: 11 October 2026).</p>
+<p>Taherdoost, H. and Madanchian, M. (2023) 'Multi-criteria decision making (MCDM) methods and concepts', <em>Encyclopedia</em>, 3(1), pp. 77–87. Available at: <a href="https://doi.org/10.3390/encyclopedia3010006">https://doi.org/10.3390/encyclopedia3010006</a></p>
+<p>Wallace, M. and Webber, L. (2017) <em>The Disaster Recovery Handbook</em>. 3rd edn. New York: AMACOM.</p>
+
+<hr>
+<p class="backlink"><a href="../index.html">&larr; Back to portfolio home</a></p>
+</body>
+</html>

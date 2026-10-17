@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reflective piece — Security and Risk Management (SRM_PCOM7E)</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; max-width: 820px; margin: 40px auto; padding: 0 20px; line-height: 1.55; }
+  h1, h2, h3, a { color: #0b5394; }
+  a { text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  hr { border: 0; border-top: 1px solid #0b5394; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th, td { border: 1px solid #0b5394; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #0b5394; color: #fff; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  blockquote { border-left: 3px solid #0b5394; margin-left: 0; padding-left: 14px; color: #444; }
+  code { background: #f4f4f4; padding: 1px 4px; }
+  .backlink { margin-top: 32px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<h1 id="reflective-piece--security-and-risk-management-srm_pcom7e">Reflective piece — Security and Risk Management (SRM_PCOM7E)</h1>
+<p>Reflecting on the Security and Risk Management module, and on the quantitative risk assessment for a digitalising business that concluded it, one question keeps resurfacing: can risk ever be known well enough to model, or does the act of quantification manufacture a confidence the underlying knowledge cannot support? This reflection works through that question in four stages, following Rolfe, Freshwater and Jasper's (2001) WHAT, SO WHAT and NOW WHAT structure: what the module's process and my contributions actually were; what working in a development team, and my own emotional responses, revealed; and what I now critique, and will do differently, as a risk practitioner.</p>
+<p>The WHAT stage begins with the process itself. The final project required identifying and analysing security risks, threats and vulnerabilities for a firm moving to automated, international warehousing, then designing continuity arrangements for a 24/7/365 operation. I applied STRIDE threat modelling and attack trees to structure identification, selected Monte Carlo simulation decomposed along FAIR lines (Hubbard and Seiersen, 2023) after rejecting Bayesian updating and multi-criteria methods, and designed multi-region recovery on paired Azure regions. The intellectual frame was Aven and Thekdi's (2025) risk science: risk as knowledge about the world, graded by strength of knowledge, not merely measured in it. Not everything went to plan: my correlation assumption behaved differently in simulation than in intent, a friction that proved instructive.</p>
+<p>My individual contribution ran on two tracks. Individually, I owned the executive summary end to end, including a reproducible Python model (200,000 iterations, fixed seed) and a substantial revision responding to eleven points of tutor feedback. In the Development Team Project, my Group 2 consultancy produced a risk identification report for Pampered Pets under ISO/IEC 27005:2022, within which my contribution centred on assisting the risk evaluation: scoring the identified risks against the five-point likelihood/impact matrix across both the status-quo and the digitalisation assessments.</p>
+<p>The SO WHAT stage turns to the team. In the Pampered Pets exercise, the moment that stays with me was the team's treatment of the investor's three headline figures — 50% revenue uplift, 24% cost saving, 33% attrition — as claims to be tested rather than facts to be relayed. That position was reached by consensus rather than disagreement, and the absence of conflict was itself instructive: agreement came from a shared test of the evidence, not from avoiding the question. What it revealed is that risk communication is less about transmitting findings than about negotiating what counts as evidence: Sutton (2021) argues qualitative estimation is defensible precisely where historical loss data is absent, and our group had to agree on that defensibility before any register row could be scored. The lesson generalises: technical and commercial audiences disagree not about the numbers but about what the numbers are entitled to claim.</p>
+<p>My emotional responses were equally instructive. The model's output genuinely surprised me: cyber-attack, at a 17.4% annual frequency, accounted for 74.2% of the variance in aggregate annual loss, so a mid-table scenario dominated the tail — a result I had to sit with before trusting it. The work was a genuine challenge, and completing it left me satisfied rather than relieved. The tutor's provisional grade of 60% tempered that satisfaction at first, but the feedback proved to be eleven specific, checkable items rather than a general judgement; the emotion, once reframed, became information.</p>
+<p>The NOW WHAT stage is the critique. My own approach over-trusted fluency: I had written that minimum, modal and maximum inputs were "assumed behind every input" without printing them, and had mentioned a fixed seed without supplying it. The marker read both exactly right — a promise in prose is not a deliverable, and reproducibility must live in the artefact, not beside it. Aven and Thekdi's (2025) strength-of-knowledge grading, and the cautionary principle it underwrites, changed how I think: every figure I now produce states what the judgement rests on. I do differently: I write for the reader of the document, not the author of the work, and I self-review against verifiability rather than fluency.</p>
+<p>Professionally, the module developed quantitative literacy, critical analysis, and the communication of technical findings to non-technical audiences — the executive summary had to answer royalty and an investor in 2,000 words — alongside legal and ethical awareness of UK GDPR transfer rules and DPIAs. As an information security analyst working across red-team engagements and audits, the transfer is direct: STRIDE and attack trees structure offensive reconnaissance as readily as they structured threat identification, ISO/IEC 27005 and DPIA practice map onto audit fieldwork, and quantitative literacy sharpens the risk reporting both sides of the role demand. My next steps are concrete: apply structured risk decomposition to a live register in my current role by 31 December 2026; adopt a reproducibility checklist (inputs, seed, assumptions printed in the artefact) for every analysis I deliver within the next quarter; and complete the top PDP action in my skills matrix by 31 January 2027.</p>
+<p>In conclusion, the module made me a particular kind of risk practitioner: one who treats quantification as structured judgement rather than measurement, who states openly what each figure rests on, and who regards an unverified-looking claim as a defect in itself. The introduction's question resolves accordingly — risk cannot be known well enough to model with certainty, but it can be modelled honestly, and honesty is the controllable part. The reflective habit I will keep is Rolfe's simplest discipline: asking what happened, so what, and now what, until the last answer is checkable (Rolfe, Freshwater and Jasper, 2001; University of Edinburgh, no date).</p>
+<h2 id="references">References</h2>
+<p>Aven, T. and Thekdi, S. (2025) <em>Risk Science: An Introduction</em>. 2nd edn. Abingdon: Routledge. Available at: <a href="https://doi.org/10.4324/9781003494317">https://doi.org/10.4324/9781003494317</a></p>
+<p>Hubbard, D.W. and Seiersen, R. (2023) <em>How to Measure Anything in Cybersecurity Risk</em>. 2nd edn. Hoboken, NJ: Wiley.</p>
+<p>Rolfe, G., Freshwater, D. and Jasper, M. (2001) <em>Critical reflection for nursing and the helping professions: a user's guide</em>. Basingstoke: Palgrave Macmillan.</p>
+<p>Sutton, D. (2021) <em>Information Risk Management</em>. 2nd edn. Swindon: BCS Learning &amp; Development.</p>
+<p>University of Edinburgh (no date) <em>Reflection Toolkit</em>. Available at: <a href="https://reflection.ed.ac.uk/">https://reflection.ed.ac.uk/</a> (Accessed: 17 October 2026).</p>
+
+<hr>
+<p class="backlink"><a href="../index.html">&larr; Back to portfolio home</a></p>
+</body>
+</html>

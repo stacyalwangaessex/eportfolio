@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 8 discussion forum — Peer Response 1 (to Janet Karani)</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; max-width: 820px; margin: 40px auto; padding: 0 20px; line-height: 1.55; }
+  h1, h2, h3, a { color: #0b5394; }
+  a { text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  hr { border: 0; border-top: 1px solid #0b5394; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th, td { border: 1px solid #0b5394; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #0b5394; color: #fff; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  blockquote { border-left: 3px solid #0b5394; margin-left: 0; padding-left: 14px; color: #444; }
+  code { background: #f4f4f4; padding: 1px 4px; }
+  .backlink { margin-top: 32px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<h1 id="unit-8-discussion-forum--peer-response-1-to-janet-karani">Unit 8 discussion forum — Peer Response 1 (to Janet Karani)</h1>
+<p><strong>Thread:</strong> Critique of CVSS and alternatives (Wunder et al., 2024) — three-week discussion covering Units 7–9 <strong>Label:</strong> Peer Response <strong>Responding to:</strong> Janet Karani, posted Thursday, 17 September 2026, 10:41 AM <strong>Word count:</strong> 196 body words excluding in-text citations, verified by count (204 including citations; within the 200–300 limit — citations and references excluded from the word count per the activity instructions)</p>
+<hr />
+<p><strong>Peer Response</strong></p>
+<p>Janet, I agree with your critique, and in particular with the severity-versus-risk distinction you draw. Wunder et al. (2024) show the problem runs deeper than inconsistent judgement: experience and self-rated expertise explained almost none of the variance in their regression, so the inconsistency is a property of the instrument itself. Your point that organisations may prioritise differently even when using the same framework follows directly — contested inputs cannot deliver reproducible prioritisation.</p>
+<p>Your case for EPSS is well argued. I would add one refinement: EPSS estimates the probability of exploitation rather than its impact, so the two systems answer different questions. A vulnerability that is likely to be exploited but trivially exploitable against an unimportant asset, and one that is rarely exploited but catastrophic on compromise, may score identically on EPSS and very differently in consequence. This is why Aven and Thekdi (2025) treat risk as depending on both likelihood and consequence under uncertainty. EPSS therefore strengthens CVSS as an input to prioritisation, but the impact dimension still needs a home — which is where decision-tree approaches earn their place.</p>
+<p>A question back to you: would you combine EPSS with severity scoring, and if so, whose impact judgement supplies the missing half?</p>
+<h2 id="references">References</h2>
+<p>Aven, T. and Thekdi, S. (2025) <em>Risk Science</em>. Abingdon: Routledge.</p>
+<p>Wunder, J., Kurtz, A., Eichenmüller, C., Gassmann, F. and Benenson, Z. (2024) 'Shedding Light on CVSS Scoring Inconsistencies: A User-Centric Study on Evaluating Widespread Security Vulnerabilities'. Available at: <a href="https://arxiv.org/abs/2308.15259">https://arxiv.org/abs/2308.15259</a> (Accessed: 17 October 2026).</p>
+<hr />
+<p><em>Artefact notes (not part of the post): evidences LO2 and LO3. Response is primarily agreement with extension, per user direction, engaging Janet's own sources (Aven and Thekdi 2025; Wunder et al. 2024).</em></p>
+
+<hr>
+<p class="backlink"><a href="../index.html">&larr; Back to portfolio home</a></p>
+</body>
+</html>

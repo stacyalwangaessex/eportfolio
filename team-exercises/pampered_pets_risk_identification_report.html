@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SRM E-Portfolio</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; max-width: 820px; margin: 40px auto; padding: 0 20px; line-height: 1.55; }
+  h1, h2, h3, a { color: #0b5394; }
+  a { text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  hr { border: 0; border-top: 1px solid #0b5394; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th, td { border: 1px solid #0b5394; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #0b5394; color: #fff; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  blockquote { border-left: 3px solid #0b5394; margin-left: 0; padding-left: 14px; color: #444; }
+  code { background: #f4f4f4; padding: 1px 4px; }
+  .backlink { margin-top: 32px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<p><strong>Pampered Pets: Risk Identification Report</strong></p>
+<p>An Assessment of the Status Quo and of the Proposed Digital Transformation</p>
+<p>Security and Risk Management (SRM_PCOM7E) --- Development Team Project, Group 2</p>
+<p><em>Word count: 898 (main body; excludes title block, risk register tables, figure and reference list)</em></p>
+<p><strong>1. Introduction</strong></p>
+<p>Pampered Pets is a micro-enterprise: four staff, two networked computers, a single wireless gateway shared with personal smartphones, and ninety per cent of trade conducted face to face. Its new investor proposes digitalisation and international sourcing. This report assesses the risks of both the status quo and the proposed transformation, interrogates the three growth propositions put to the consultancy, and recommends a proportionate course of action.</p>
+<p><strong>2. Risk Assessment Methodology</strong></p>
+<p>ISO/IEC 27005:2022 has been adopted for both assessments. It is guidance rather than a certifiable requirement, and so scales to a four-person firm without imposing the documentation burden of a full management system (ISO, 2022). Three further considerations informed the selection:</p>
+<ul>
+<li><p>Continuity: it aligns with ISO/IEC 27001 and ISO 31000, so controls selected now remain valid should international trading later oblige the business to seek certification.</p></li>
+<li><p>Fitness for purpose: its asset-based identification approach suits an organisation whose critical assets are few and tangible --- recipes, supplier relationships, transaction records and brand reputation.</p></li>
+<li><p>Rejected alternatives: NIST SP 800-30 is oriented towards US federal systems, while OCTAVE Allegro presumes internal analytical capacity that Pampered Pets does not possess (Kirvan, 2021).</p></li>
+</ul>
+<p>A qualitative five-point likelihood and impact matrix is applied throughout, following Sutton's (2021) argument that qualitative estimation suits contexts lacking historical loss data. Alice is the risk owner; appetite is low for regulatory risk and moderate for commercial risk.</p>
+<p><strong>3. Assessment 1: The Business As It Stands</strong></p>
+<p><strong>3.1 Context and vulnerabilities</strong></p>
+<ul>
+<li><p>A flat, unsegmented wireless network carries the point-of-sale terminal, the warehouse computer and personal smartphones alike.</p></li>
+<li><p>The warehouse machine is described as old and is therefore probably beyond vendor support and unpatched.</p></li>
+<li><p>There is no stated backup regime, multi-factor authentication, written policy or incident plan; the survivability of the business rests on four individuals.</p></li>
+</ul>
+<p>This posture is typical rather than exceptional: only 30% of UK businesses conducted a cyber risk assessment last year, and among micro businesses just 31% held a formal policy and 14% delivered any staff training (Department for Science, Innovation and Technology and Home Office, 2026). Typicality, however, is not a defence.</p>
+<p><strong>3.2 Risk and threat evaluation</strong></p>
+<hr />
+<p><strong>Risk / threat <strong>Threat <strong>Likelihood</strong> <strong>Impact</strong> <strong>Rating</strong> scenario</strong> source</strong></p>
+<hr />
+<p>R1 Phishing or business Cybercriminal 4 4 <strong>High</strong> email compromise diverts<br />
+orders</p>
+<p>R2 Ransomware disables Cybercriminal 3 4 <strong>High</strong> the unsupported<br />
+warehouse computer</p>
+<p>R3 Lateral movement from Criminal / 4 3 <strong>High</strong> personal devices onto insider<br />
+the flat network</p>
+<p>R4 Irrecoverable data Accidental 3 5 <strong>High</strong> loss (no verified<br />
+backup)</p>
+<p>R5 UK GDPR breach or Regulatory 3 3 <strong>Medium</strong> unevidenced<br />
+accountability</p>
+<h2 id="r6-customer-migration-to-market-4-4-high-online-competitors">R6 Customer migration to Market 4 4 <strong>High</strong> online competitors</h2>
+<p><em>Table 1: Risk register --- current state (likelihood and impact scored 1--5).</em></p>
+<p>Phishing was the most prevalent attack type experienced by UK businesses (38%) and was judged most disruptive by 69% of those breached, while ransomware fell to 1% (DSIT and Home Office, 2026). R1 and R3 therefore warrant priority over more dramatic scenarios. R6 is deliberately included: Sørensen (2018) frames digitalisation as both opportunity and risk; on that reading, inaction is itself a risk decision.</p>
+<p><strong>3.3 Proposed mitigations</strong></p>
+<ul>
+<li><p>Implement automated cloud backup with a tested restore; isolate or retire the unsupported warehouse machine.</p></li>
+<li><p>Segregate the network into business and staff/guest SSIDs and enforce multi-factor authentication on email and banking.</p></li>
+<li><p>Adopt a concise acceptable-use and incident-response policy, with quarterly phishing briefings for all four staff.</p></li>
+<li><p>Map the personal data held, register with the ICO and apply a retention schedule to satisfy the accountability principle (Information Commissioner's Office, 2026).</p></li>
+<li><p>Adopt the five Cyber Essentials control areas as a proportionate benchmark (National Cyber Security Centre, no date).</p></li>
+</ul>
+<p><strong>4. Assessment 2: The Digitalisation Programme</strong></p>
+<p><strong>4.1 Proposed changes</strong></p>
+<ul>
+<li><p>An e-commerce storefront using a hosted payment page, so that no cardholder data is stored locally.</p></li>
+<li><p>A cloud inventory system replacing the warehouse spreadsheet and integrating with the point of sale.</p></li>
+<li><p>Email marketing and a blog to widen reach.</p></li>
+<li><p>Onboarding of international suppliers and third-party logistics.</p></li>
+</ul>
+<p><strong>4.2 Risk and threat evaluation</strong></p>
+<hr />
+<p><strong>Risk / threat <strong>Threat <strong>Likelihood</strong> <strong>Impact</strong> <strong>Rating</strong> scenario</strong> source</strong></p>
+<hr />
+<p>D1 Web skimming or Cybercriminal 4 5 <strong>Critical</strong> formjacking of the<br />
+checkout page</p>
+<p>D2 Payment fraud and Criminal / 3 4 <strong>High</strong> loss of PCI DSS regulatory<br />
+validation</p>
+<p>D3 Wider personal data Regulatory 4 4 <strong>High</strong> processing and overseas<br />
+transfers</p>
+<p>D4 Compromise or outage Supply chain 3 4 <strong>High</strong> of platform or logistics<br />
+provider</p>
+<p>D5 Loss of local Operational 4 5 <strong>Critical</strong> provenance and<br />
+ten-minute contingency</p>
+<h2 id="d6-capability-gap-four-human-4-3-high-staff-absorbing-new-systems">D6 Capability gap: four Human 4 3 <strong>High</strong> staff absorbing new<br />
+systems</h2>
+<p><em>Table 2: Risk register --- post-digitalisation.</em></p>
+<p>ENISA attributes about 60% of observed initial access to phishing, and records supply chain as 10.6% of threat categories (ENISA, 2025). D1 is rated critical because merchants must now confirm that their site is not susceptible to attacks from scripts affecting their e-commerce systems to remain eligible for the simplified Self-Assessment Questionnaire A (PCI Security Standards Council, 2025). D5 warrants particular emphasis: the claimed 24% saving is a gross unit-cost figure ignoring freight, tariffs, quality assurance and the loss of a supply chain that staff can currently rescue by car. Only 12% of micro businesses review supplier risk (DSIT and Home Office, 2026), so digitalisation would convert a resilient local dependency into a fragile, unmonitored global one.</p>
+<p><strong>4.3 Proposed mitigations</strong></p>
+<ul>
+<li><p>Fully outsource card handling to a compliant provider, obtain its Attestation of Compliance and validate through SAQ A.</p></li>
+<li><p>Deploy Content Security Policy and Subresource Integrity, and schedule quarterly external vulnerability scanning.</p></li>
+<li><p>Complete a data protection impact assessment before launch; put processor contracts, a privacy notice and marketing consent in place.</p></li>
+<li><p>Dual-source: retain local suppliers for signature product lines and audit international suppliers before any switch.</p></li>
+<li><p>Retain a managed security provider, as 44% of micro businesses already do, and cost cyber insurance into the business case.</p></li>
+</ul>
+<p><strong>5. Recommendations and Conclusion</strong></p>
+<p>The team recommends proceeding with digitalisation, but incrementally and with the Phase 1 security baseline established before any customer-facing system goes live. None of the three figures put to us should be accepted as stated. A 50% uplift in revenue is plausible only across several years and only if fulfilment capacity grows with demand. The 24% saving is optimistic once total cost of ownership and lost resilience are counted. The 33% attrition figure is unevidenced, but its direction is credible, and it is the strongest argument against the status quo.</p>
+<hr />
+<p><strong>Workstream</strong> <strong>M1</strong> <strong>M2</strong> <strong>M3</strong> <strong>M4</strong> <strong>M5</strong> <strong>M6</strong> <strong>M7</strong> <strong>M8</strong> <strong>M9</strong> <strong>M10</strong> <strong>M11</strong> <strong>M12</strong></p>
+<hr />
+<p>Phase 1 --<br />
+Security<br />
+baseline</p>
+<p>Phase 2 --<br />
+E-commerce &amp; PCI<br />
+DSS</p>
+<p>Phase 3 -- Cloud<br />
+inventory system</p>
+<p>Phase 4 --<br />
+Staged<br />
+international<br />
+sourcing</p>
+<h2 id="continuous----training--risk-review">Continuous --<br />
+Training &amp; risk<br />
+review</h2>
+<p><em>Figure 1: Indicative twelve-month implementation timeline.</em></p>
+<p>The status quo is not the low-risk option; it merely relocates risk from the technical domain to the commercial one, where it is less visible and harder to reverse. Digitalisation is therefore recommended, conditional on security controls preceding functionality, local sourcing being preserved for the products on which the brand's reputation rests, and the assessment being revisited at each phase gate.</p>
+<p><strong>Reference List</strong></p>
+<p>Department for Science, Innovation and Technology and Home Office (2026) <em>Cyber security breaches survey 2025/2026</em>. Available at: <a href="https://www.gov.uk/government/statistics/cyber-security-breaches-survey-20252026/cyber-security-breaches-survey-20252026">https://www.gov.uk/government/statistics/cyber-security-breaches-survey-20252026/cyber-security-breaches-survey-20252026</a> (Accessed: 30 August 2026).</p>
+<p>ENISA (2025) <em>ENISA threat landscape 2025</em>. Available at: <a href="https://enisa.europa.eu/publications/enisa-threat-landscape-2025">https://enisa.europa.eu/publications/enisa-threat-landscape-2025</a> (Accessed: 30 August 2026).</p>
+<p>Information Commissioner's Office (2026) <em>A guide to the data protection principles</em>. Available at: <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles">https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles</a> (Accessed: 30 August 2026).</p>
+<p>International Organization for Standardization (2022) <em>ISO/IEC 27005:2022 Information security, cybersecurity and privacy protection --- Guidance on managing information security risks</em>. Geneva: ISO. Available at: <a href="https://www.iso.org/standard/80585.html">https://www.iso.org/standard/80585.html</a> (Accessed: 30 August 2026).</p>
+<p>Kirvan, P. (2021) <em>Top 15 IT security frameworks and standards explained</em>. Available at: <a href="https://www.techtarget.com/searchsecurity/tip/IT-security-frameworks-and-standards-Choosing-the-right-one">https://www.techtarget.com/searchsecurity/tip/IT-security-frameworks-and-standards-Choosing-the-right-one</a> (Accessed: 30 August 2026).</p>
+<p>National Cyber Security Centre (no date) <em>Cyber Essentials</em>. Available at: <a href="https://www.ncsc.gov.uk/cyberessentials/overview">https://www.ncsc.gov.uk/cyberessentials/overview</a> (Accessed: 30 August 2026).</p>
+<p>PCI Security Standards Council (2025) <em>Important updates announced for merchants validating to Self-Assessment Questionnaire A</em>. Available at: <a href="https://blog.pcisecuritystandards.org/important-updates-announced-for-merchants-validating-to-self-assessment-questionnaire-a">https://blog.pcisecuritystandards.org/important-updates-announced-for-merchants-validating-to-self-assessment-questionnaire-a</a> (Accessed: 30 August 2026).</p>
+<p>Sørensen, B.T. (2018) 'Digitalisation: An Opportunity or a Risk?', <em>Journal of European Competition Law &amp; Practice</em>, 9(6), pp. 349-350. Available at: <a href="https://doi.org/10.1093/jeclap/lpy038">https://doi.org/10.1093/jeclap/lpy038</a></p>
+<p>Sutton, D. (2021) <em>Information Risk Management</em>. 2nd edn. Swindon: BCS Learning &amp; Development.</p>
+
+<hr>
+<p class="backlink"><a href="../index.html">&larr; Back to portfolio home</a></p>
+</body>
+</html>

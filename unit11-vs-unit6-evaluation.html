@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evaluation: Final project (Unit 11) vs status document (Unit 6)</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; max-width: 820px; margin: 40px auto; padding: 0 20px; line-height: 1.55; }
+  h1, h2, h3, a { color: #0b5394; }
+  a { text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  hr { border: 0; border-top: 1px solid #0b5394; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th, td { border: 1px solid #0b5394; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #0b5394; color: #fff; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  blockquote { border-left: 3px solid #0b5394; margin-left: 0; padding-left: 14px; color: #444; }
+  code { background: #f4f4f4; padding: 1px 4px; }
+  .backlink { margin-top: 32px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<h1 id="evaluation-final-project-unit-11-vs-status-document-unit-6">Evaluation: Final project (Unit 11) vs status document (Unit 6)</h1>
+<p><em>Weighted at 5% (Collaboration). Compares the Group 2 Development Team Project status document (Unit 6) with the individual final project executive summary (Unit 11). Word count ≈ 380 body words.</em></p>
+<h2 id="what-the-status-document-set-out-unit-6">What the status document set out (Unit 6)</h2>
+<p>The Unit 6 status document — the Group 2 risk identification report for Pampered Pets (<a href="team-exercises/pampered_pets_risk_identification_report.html">team-exercises/pampered_pets_risk_identification_report.html</a>) — assessed both the status quo and the proposed digitalisation of a four-person micro-enterprise. It adopted ISO/IEC 27005:2022 with a qualitative five-point likelihood-and-impact matrix, explicitly justified on Sutton's (2021) argument that qualitative estimation suits contexts lacking historical loss data. Its recommendations were conditional rather than binary: proceed with digitalisation incrementally, establish a Phase 1 security baseline before any customer-facing system went live, and dual-source strategic suppliers to reduce key-supplier reliance. It also declined to accept the investor's three headline figures — 50% revenue uplift, 24% cost saving, 33% attrition — as stated.</p>
+<h2 id="what-the-final-project-delivered-unit-11">What the final project delivered (Unit 11)</h2>
+<p>The final project addressed a larger brief — a business moving to automated, international warehousing — and delivered a quantitative executive summary (<a href="unit-11/executive_summary_v2.html">unit-11/executive_summary_v2.html</a>): STRIDE threat modelling and attack trees feeding a FAIR-structured Monte Carlo simulation of 200,000 iterations with a fixed seed, six risk scenarios with annual probabilities and percentile loss figures, sensitivity analysis, and an active–active multi-region continuity design meeting a sub-minute RTO and RPO.</p>
+<h2 id="what-changed-between-the-two-and-why">What changed between the two, and why</h2>
+<p>The method changed because the brief changed: the Unit 11 client requested probabilities and loss distributions, which a five-point matrix cannot supply, so qualitative screening gave way to Monte Carlo simulation with declared assumptions. Two substantive findings carried across. First, the Unit 6 concern about supplier concentration was vindicated: the model found key-supplier dependency the most probable single loss, at approximately 21% annual probability — precisely the failure mode the status document's dual-sourcing recommendation targeted. Second, the dominant risk shifted with scale: phishing, the top concern at micro-enterprise scale in Unit 6, was superseded at enterprise scale by cyber-attack on warehouse operational technology, which drove roughly three-quarters of the variance in aggregate annual loss. The principle that security precedes functionality also survived: the Phase 1 baseline became a recommendation to complete a DPIA before any new automated location.</p>
+<h2 id="what-this-comparison-taught-me-about-project-estimation">What this comparison taught me about project estimation</h2>
+<p>The status document worked as a baseline for measuring drift, not as a promise: the method did not survive contact with the new brief, but the risk judgements did — qualitative screening correctly ranked the concerns the quantitative model later confirmed. The transferable lesson is that scale changes the risk profile, so risk artefacts must be re-derived for each context rather than transplanted.</p>
+<hr />
+<p><em>Artefact notes: evidences the Collaboration criterion (5%) — evaluation of the final project against the midpoint status document, with specific figure anchors from both documents.</em></p>
+
+<hr>
+<p class="backlink"><a href="index.html">&larr; Back to portfolio home</a></p>
+</body>
+</html>
