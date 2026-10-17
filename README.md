@@ -31,7 +31,7 @@ Per the university's Academic Report Writing formula and PEEL paragraph planner:
 - **Command words:** check the command word of each task (explain, evaluate, critically analyse) and let it govern the depth of appraisal.
 - **Introductions:** rewrite the title in your own words, problematise and contextualise the issue, signpost the perspective taken, and may hint at the conclusions.
 - **Paragraphs:** one main point per paragraph, opened with a topic sentence, developed Point → Evidence → Explanation → Link, with every argument supported by evidence and citations.
-- **Word count:** the brief sets a 2,000-word total with 1,000 for the reflective section; that 1,000 cap is strict (the generic +10% allowance does not apply to it) and the rest of the portfolio has no strict limit but should stay inside the 2,000 total. Reference lists never count in any word total.
+- **Length limits:** the brief sets a 2,000-word total with 1,000 for the reflective section; that 1,000 cap is strict (the generic +10% allowance does not apply to it) and the rest of the portfolio has no strict limit but should stay inside the 2,000 total. Reference lists never count in any word total.
 - **Reference list:** alphabetical; starts at the top of a new page (page break before it in any exported DOCX/PDF); every entry matches an in-text citation and vice versa; Cite Them Right Harvard throughout.
 - **Report-style artefacts** (e.g. the executive summary) keep their professional report structure but must follow the reference-list rules and the citation discipline above.
 
