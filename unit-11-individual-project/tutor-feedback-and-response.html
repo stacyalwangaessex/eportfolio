@@ -55,7 +55,6 @@
 <th>#</th>
 <th>Feedback point</th>
 <th>My response</th>
-<th>Where</th>
 </tr>
 </thead>
 <tbody>
@@ -63,67 +62,56 @@
 <td>1</td>
 <td>The submission promised minimum, modal and maximum inputs without providing them; calculations were insufficiently explained.</td>
 <td>I added a full input table (annual probabilities, severity medians and dispersions for all six scenarios), explained the Poisson-rate conversion λ = −ln(1 − p), and documented the lognormal severity fitting.</td>
-<td>v2 §4</td>
 </tr>
 <tr>
 <td>2</td>
 <td>The recovery proposal needed named services and a definite platform recommendation.</td>
 <td>The revised artefact names a definite platform (Microsoft Azure, paired UK South and UK West regions) and specific services (Azure Front Door, Azure SQL Database Business Critical zone-redundant, auto-failover groups), with the decision rationale.</td>
-<td>v2 §7</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Sensitivity contributions and correlation assumptions lacked supporting calculations.</td>
 <td>I now state how variance shares are computed (covariance of each scenario's simulated annual loss with the aggregate, divided by aggregate variance) and report both the target and achieved correlation (ρ = 0.55 latent; Spearman 0.32 realised).</td>
-<td>v2 §4-5</td>
 </tr>
 <tr>
 <td>4</td>
 <td>An aggregate supply-disruption probability was missing.</td>
 <td>Added: 46.7% probability of at least one supply-disruption event per year, alongside the 16.9% quality figure.</td>
-<td>v2 §5</td>
 </tr>
 <tr>
 <td>5</td>
 <td>The conclusion that digitalisation does not inherently threaten quality was not established against the previous operating model.</td>
 <td>I added an explicit comparison with the previous craft-based, single-site model, and qualified the conclusion honestly: the inputs are judgement-based, so the comparison is argued, not measured.</td>
-<td>v2 §5</td>
 </tr>
 <tr>
 <td>6</td>
 <td>Recovery claims needed clearer qualification and testing criteria.</td>
 <td>The revised design separates zonal failures (synchronous replication; published RPO 0 / RTO ≤ 60 s) from full regional outages (asynchronous; RPO ≤ 5 min), states the qualification openly, and sets test criteria: quarterly failover drills with measured RTO/RPO, an annual regional game day, and a funded annual exit test.</td>
-<td>v2 §7</td>
 </tr>
 <tr>
 <td>7</td>
 <td>Scaling of survey findings into company-specific probabilities was not demonstrated.</td>
 <td>§4 now states explicitly how sector surveys were used: to sanity-check the plausibility of the assumed frequencies (upper-bound logic, scaled by firm size), not to derive them, and the limitation is restated.</td>
-<td>v2 §4</td>
 </tr>
 <tr>
 <td>8</td>
 <td>Direct technical documentation was needed for replication, regional configuration and failover performance.</td>
 <td>Added Microsoft Learn technical references for zone redundancy, auto-failover groups and their published RTO/RPO figures.</td>
-<td>v2 §7 + references</td>
 </tr>
 <tr>
 <td>9</td>
 <td>Fixed seed mentioned but not supplied, limiting reproducibility.</td>
 <td>The seed value (42, NumPy PCG64) and iteration count (200,000) are now stated in the artefact itself, and the model file is linked so any figure can be regenerated.</td>
-<td>v2 §4</td>
 </tr>
 <tr>
 <td>10</td>
 <td>Author names and citation formatting needed consistent checking.</td>
 <td>A consistency pass was run over all in-text citations against the reference list; every citation maps to exactly one entry and vice versa.</td>
-<td>v2 references</td>
 </tr>
 <tr>
 <td>11</td>
 <td>Misplaced commas, awkward sentences, repetition; a recovery diagram would help.</td>
 <td>The revised artefact was proofread line by line, repetition was cut, and a text-based recovery architecture diagram was added.</td>
-<td>v2 throughout, §7</td>
 </tr>
 </tbody>
 </table>
