@@ -1,4 +1,4 @@
-# Publishing this e-portfolio — step-by-step
+# Publishing this e-portfolio: step-by-step
 
 Run these commands from the folder that contains this file (`srm-eportfolio/`). Replace `<your-username>` with your GitHub username.
 
@@ -15,7 +15,7 @@ git commit -m "SRM_PCOM7E e-portfolio: complete submission"
 
 1. Go to github.com → **New repository**.
 2. Name it (e.g. `srm-eportfolio`) and set it to **Public** (GitHub Pages is free only for public repos; a private repo requires GitHub Pro).
-3. Do **not** initialise it with a README or licence — this repo already has one.
+3. Do **not** initialise it with a README or licence: this repo already has one.
 
 ## 3. Push to GitHub
 
@@ -25,7 +25,7 @@ git remote add origin https://github.com/<your-username>/srm-eportfolio.git
 git push -u origin main
 ```
 
-If you use two-factor authentication, GitHub no longer accepts account passwords for pushes — use a Personal Access Token (Settings → Developer settings → Personal access tokens → Tokens (classic), scope `repo`) as the password, or set up the `gh` CLI / SSH keys.
+If you use two-factor authentication, GitHub no longer accepts account passwords for pushes: use a Personal Access Token (Settings → Developer settings → Personal access tokens → Tokens (classic), scope `repo`) as the password, or set up the `gh` CLI / SSH keys.
 
 ## 4. Enable GitHub Pages
 
@@ -52,6 +52,6 @@ From then on, make no further commits to `submission`. If you fix anything later
 
 ## Notes
 
-- The DOCX artefacts (`executive_summary.docx`, `executive_summary_v2.docx`, `Pampered_Pets_Risk_Identification_Report_2.docx`) and the PDF are uploaded as binary files — GitHub displays them as download links, which is fine for a portfolio.
-- Keep the PDF's original filename (`12701559_-_Executive_Summary.pdf`) — it is the graded artefact and the filename is part of its provenance.
+- The DOCX artefacts (`executive_summary.docx`, `executive_summary_v2.docx`, `Pampered_Pets_Risk_Identification_Report_2.docx`) and the PDF are uploaded as binary files; GitHub displays them as download links, which is fine for a portfolio.
+- Keep the PDF's original filename (`12701559_-_Executive_Summary.pdf`), it is the graded artefact and the filename is part of its provenance.
 - Before pushing, fill the two `TODO` placeholders in `team-exercises/README.html` (your individual contribution statement and any supporting evidence).
