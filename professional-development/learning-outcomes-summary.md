@@ -1,3 +1,8 @@
+---
+layout: page
+title: Artefact
+---
+
 # Summary of Learning Outcomes
 
 **LO1 — Identify and analyse critically security risks, threats and vulnerabilities in information systems, accounting for the current threat landscape.**

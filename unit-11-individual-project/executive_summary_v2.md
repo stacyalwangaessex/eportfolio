@@ -1,3 +1,8 @@
+---
+layout: page
+title: Artefact
+---
+
 # Executive Summary
 
 ## 1. Purpose and scope

@@ -1,3 +1,8 @@
+---
+layout: page
+title: Artefact
+---
+
 **Pampered Pets: Risk Identification Report**
 
 An Assessment of the Status Quo and of the Proposed Digital

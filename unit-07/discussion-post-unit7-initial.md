@@ -1,3 +1,8 @@
+---
+layout: page
+title: Artefact
+---
+
 # Unit 7 discussion forum — Initial Post (CVSS discussion, Units 7–9)
 
 **Thread:** Critique of CVSS and alternatives (Wunder et al., 2024) — three-week discussion covering Units 7–9

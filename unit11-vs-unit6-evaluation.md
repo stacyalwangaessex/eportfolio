@@ -1,3 +1,8 @@
+---
+layout: page
+title: Artefact
+---
+
 # Evaluation: Final project (Unit 11) vs status document (Unit 6)
 
 *Weighted at 5% (Collaboration). Compares the Group 2 Development Team Project status document (Unit 6) with the individual final project executive summary (Unit 11). Word count ≈ 380 body words.*

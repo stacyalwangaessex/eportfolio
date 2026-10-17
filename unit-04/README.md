@@ -1,3 +1,8 @@
+---
+layout: page
+title: Artefact
+---
+
 # Unit 4 — Application of Threat Modelling and Management Techniques
 
 **Unit topic:** Applying threat modelling and management in practice, guided by the threat modelling manifesto, the OWASP cookbook and the MITRE ATT&CK database: evaluating publicly available tools, and creating threat models for suggested scenarios (OWASP, 2024).

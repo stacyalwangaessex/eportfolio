@@ -1,3 +1,8 @@
+---
+layout: page
+title: Artefact
+---
+
 # Meeting notes — Development Team Project (Group 2)
 
 The Group 2 consultancy work for the Pampered Pets risk identification report was conducted through the university's online learning platform: task division, drafting and review took place in the group workspace, with decisions agreed by consensus.

@@ -1,3 +1,8 @@
+---
+layout: page
+title: Artefact
+---
+
 # Reflective piece — Security and Risk Management (SRM_PCOM7E)
 
 Reflecting on the Security and Risk Management module, and on the quantitative risk assessment for a digitalising business that concluded it, one question keeps resurfacing: can risk ever be known well enough to model, or does the act of quantification manufacture a confidence the underlying knowledge cannot support? This reflection works through that question in four stages, following Rolfe, Freshwater and Jasper's (2001) WHAT, SO WHAT and NOW WHAT structure: what the module's process and my contributions actually were; what working in a development team, and my own emotional responses, revealed; and what I now critique, and will do differently, as a risk practitioner.

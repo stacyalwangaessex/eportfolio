@@ -1,3 +1,8 @@
+---
+layout: page
+title: Artefact
+---
+
 # Unit 11 — tutor feedback and my response
 
 *Required portfolio element: "Feedback from peers and tutors". The provisional grade for the Unit 11 executive summary was 60% (19/30 knowledge, 17/30 criticality, 13/20 sources, 5/10 structure, 6/10 integrity). The feedback below is summarised from the marker's comments; my response shows how each point was addressed in the revised artefact ([executive_summary_v2.md](executive_summary_v2.md)).*

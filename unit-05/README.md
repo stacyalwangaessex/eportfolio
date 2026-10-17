@@ -1,3 +1,8 @@
+---
+layout: page
+title: Artefact
+---
+
 # Unit 5 — An Introduction to Security and Risk Standards in Industry and the Enterprise
 
 **Unit topic:** The role of industry and enterprise standards in risk assessments and risk designs; exploring industry-specific standards and directives and selecting the appropriate standard(s) for a given situation.

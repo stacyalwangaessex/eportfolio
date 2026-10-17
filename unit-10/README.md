@@ -1,3 +1,8 @@
+---
+layout: page
+title: Artefact
+---
+
 # Unit 10 — Practical Applications and Issues in DR Implementations
 
 **Unit topic:** Practical disaster recovery design: the impact of RPO and RTO values on DR solutions, typical system solutions for standby requirements, DRaaS advantages and disadvantages, and the challenges of vendor lock-in, resilience and network security.

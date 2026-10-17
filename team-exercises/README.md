@@ -1,3 +1,8 @@
+---
+layout: page
+title: Artefact
+---
+
 # Team exercises — individual contributions
 
 ## Development Team Project — Pampered Pets risk identification report (Group 2)

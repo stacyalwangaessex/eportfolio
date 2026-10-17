@@ -1,3 +1,8 @@
+---
+layout: page
+title: Artefact
+---
+
 # Unit 8 discussion forum — Peer Response 2 (to Abinel Madzivire)
 
 **Thread:** Critique of CVSS and alternatives (Wunder et al., 2024) — three-week discussion covering Units 7–9

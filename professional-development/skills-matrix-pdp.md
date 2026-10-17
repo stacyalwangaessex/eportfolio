@@ -1,3 +1,8 @@
+---
+layout: page
+title: Artefact
+---
+
 # Professional Skills Matrix and Action Plan (PDP)
 
 Self-assessment anchored to real evidence from this module. Ratings: 1 = struggled/avoided, 3 = managed with support or difficulty, 5 = confident and independent. One development priority is identified (Critical thinking and analysis); the other core skills are at maintain level.

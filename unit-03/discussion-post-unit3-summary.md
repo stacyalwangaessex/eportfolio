@@ -1,3 +1,8 @@
+---
+layout: page
+title: Artefact
+---
+
 # Unit 3 discussion forum — Summary Post
 
 **Thread:** Data and technology risks to fairness and accountability in human rights investigations (three-week discussion covering Units 1–3)
